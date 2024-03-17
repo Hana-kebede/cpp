@@ -1,19 +1,16 @@
-#include <iostream>
+#include<iostream>
 
 using namespace std;
 
-int factorial(int *n) {
-    int result = 1;
-    for (int i=1; i<=*n; i++)
-        result *= i;
-    return result;
-}
- 
-int main() {
-    int num;
-    cout << "Enter a number: ";
-    cin >> num;
-    int *ptr = &num;
-    cout << "The factorial of " << num << " is " << factorial(ptr) << endl;
-    return 0;
+int main(){
+ float ang1,ang2,ang3;
+ cout << "Triangle Varifier" <<endl;
+ cout << "==================" << endl;
+ cout << "Enter three angles to verify as triangle : ";
+ cin >> ang1 >> ang2 >> ang3;
+ float angleSum = ang1 + ang2 + ang3;
+ if( angleSum == 180.0)
+  cout << "Valid Triangle" << endl;
+ else
+  cout << "Invalid Triangle" << endl;
 }

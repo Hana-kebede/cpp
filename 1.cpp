@@ -1,22 +1,22 @@
-#include <iostream> 
-#include <algorithm> 
+#include<iostream>
 
-using namespace std; 
+using namespace std;
 
-int findLargest(int arr[], int size) 
-{ 
- int max = arr[0];
- for(int i = 0; i < size; i++){
-    if(max < arr[i])
-        max = arr[i];
- }
- return max; 
-} 
+int main(){
+ int var1 = 1;
+ int var2 = 2;
+ cout << "Before Swap" <<endl;
+ cout << "===========" << endl;
+ cout << "First Variable: " << var1 <<endl;
+ cout << "Second Variable: " << var2 <<endl;
 
-int main() 
-{ 
- int arr[] = {2, 12, 48, 9, 30, 2, 43}; 
- int n = sizeof(arr) / sizeof(arr[0]); 
- cout << "The largest element is " << findLargest(arr,n); 
- return 0; 
-} 
+ var1 = var2 + var1;
+ var2 = var1 - var2;
+ var1 = var1 - var2;
+ 
+ cout << "\nAfter Swap" <<endl;
+ cout << "===========" << endl;
+ cout << "First Variable: " << var1 <<endl;
+ cout << "Second Variable: " << var2 <<endl;
+ 
+}

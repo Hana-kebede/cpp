@@ -1,31 +1,25 @@
-#include <iostream> 
-using namespace std; 
-  
-int getCount(int arr[], int n, int x) 
-{ 
-    int count = 0; 
-    for (int i=0; i<n; i++) 
-        if (arr[i] == x) 
-            count++; 
-    return count; 
-} 
-  
-int main() 
-{ 
-    int arr[10], x;
-    int n = sizeof(arr) / sizeof(arr[0]); 
-    cout<<"Enter the elements of array: "; 
-    for (int i=0; i<n; i++) 
-        cin>>arr[i];
+#include<iostream>
+#include<string>
+using namespace std;
 
-    cout<<endl;
-    for(int i=0; i<n; i++){
-        cout << arr[i] << " ";  
-    }
-    cout << endl;
-    cin.ignore(); 
-    cout<<"Enter the number to search: "; 
-    cin>>x; 
-    cout<<"The number "<<x<<" appears "<< getCount(arr, n, x)<<" times in the array."; 
-    return 0; 
+int main(){
+  int antenehAge , rutaAge , jemalAge;
+  cout << "Determine Youngest" << endl;
+  cout << "==================" << endl;
+  cout << "Please insert the ages of Anteneh, Ruta and Jemal respectively separated by space \"12 22 33\" " <<endl;
+  cin >> antenehAge >> rutaAge >> jemalAge;
+  if(rutaAge > jemalAge && antenehAge > jemalAge)
+    cout << "Jemal is the Youngest" << endl;
+  else if(jemalAge > rutaAge && antenehAge > rutaAge )
+    cout << "Ruta is the Youngest" << endl;
+  else if(rutaAge > antenehAge  && jemalAge > antenehAge)
+    cout << "Anteneh is the Youngest" << endl;
+  else if(rutaAge == antenehAge && antenehAge < jemalAge)
+    cout << "Anteneh and Ruta are the Youngest" << endl;
+  else if(rutaAge == jemalAge && jemalAge < antenehAge)
+    cout << "Ruta and Jemal are the Youngest" << endl;
+  else if(antenehAge == jemalAge && jemalAge < rutaAge)
+    cout << "Jemal and Anteneh are the Youngest" << endl;
+  else
+    cout << "All are equal of age" << endl;
 }
